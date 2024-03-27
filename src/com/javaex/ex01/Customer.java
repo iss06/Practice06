@@ -1,12 +1,34 @@
 package com.javaex.ex01;
 
-public class Customer extends Person{
-	private int	cNo;
+public class Customer extends Person {
+	private int cNo;
 	private int point;
-	
-	public Customer(String name, String hp, int cNO, int point) {
-		
+
+	public Customer(String name, String hp, int cNo, int point) {
+		super(name, hp);
+		this.cNo = cNo;
+		this.point = point;
 	}
 
-	
+	public int getCNo() {
+		return cNo;
+	}
+
+	public void setCNo(int cNo) {
+		this.cNo = cNo;
+	}
+
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
+	}
+
+	public void showInfo() {
+		super.showInfo();
+		System.out.print(", #고객번호: " + cNo + " #포인트점수: " + point);
+	}
+
 }
